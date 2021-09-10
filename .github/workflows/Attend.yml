@@ -1,6 +1,9 @@
 name: Attend
 
 on:
+    push:
+        branches:
+          - python
     workflow_dispatch:
     schedule:
         - cron: '30 23 * 2,3,4,5,6,9,10,11,12,1 *'
