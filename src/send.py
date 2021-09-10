@@ -1,4 +1,4 @@
-from config import webhook
+from config import WEBHOOK
 from sign import getDingSign
 import urllib3
 import json
@@ -8,7 +8,7 @@ def sendmsg(title,msg):
         'Content-Type': 'application/json',
     }
     params = getDingSign()
-    params['access_token'] = webhook
+    params['access_token'] = WEBHOOK
     message = {
         "msgtype": "markdown",
         "markdown": {

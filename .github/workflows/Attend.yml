@@ -36,8 +36,8 @@ jobs:
               env:
                   USER_INFO: ${{ secrets.USER_INFO }}
                   PUSH_KEY: ${{ secrets.PUSH_KEY }}
-                  secret: ${{ secrets.SECRET }}
-                  webhook: ${{ secrets.WEBHOOK }}
+                  SECRET: ${{ secrets.SECRET }}
+                  WEBHOOK: ${{ secrets.WEBHOOK }}
     run2:
         runs-on: macos-latest
         needs: run1
