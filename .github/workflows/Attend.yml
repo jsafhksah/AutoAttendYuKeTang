@@ -36,10 +36,11 @@ jobs:
               env:
                   USER_INFO: ${{ secrets.USER_INFO }}
                   PUSH_KEY: ${{ secrets.PUSH_KEY }}
-                  secret: ${{ secrets.secret }}
-                  webhook: ${{ secrets.webhook }}
+                  secret: ${{ secrets.SECRET }}
+                  webhook: ${{ secrets.WEBHOOK }}
     run2:
         runs-on: macos-latest
+        needs: run1
         strategy:
             matrix:
                 python-version: [ 3.9 ]
@@ -63,5 +64,5 @@ jobs:
               env:
                   USER_INFO: ${{ secrets.USER_INFO }}
                   PUSH_KEY: ${{ secrets.PUSH_KEY }}
-                  secret: ${{ secrets.secret }}
-                  webhook: ${{ secrets.webhook }}
+                  SECRET: ${{ secrets.SECRET }}
+                  WEBHOOK: ${{ secrets.WEBHOOK }}
